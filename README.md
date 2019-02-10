@@ -1,1 +1,0 @@
-# shirogichohi.github.io
