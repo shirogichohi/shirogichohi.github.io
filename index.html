@@ -25,7 +25,7 @@
 <meta name="author" content="Mary Gichohi">
 
 
-<meta name="date" content="2019-02-10">
+<meta name="date" content="2019-02-25">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,7 +33,7 @@
   
   
 
-<link rel="next" href="Datavisualisation.html">
+<link rel="next" href="intro.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -101,18 +101,25 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">R for Data Science(R4DS)</a></li>
+<li><a href="./">A Minimal Book Example</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#getting-started"><i class="fa fa-check"></i><b>1.1</b> Getting Started</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#workflow"><i class="fa fa-check"></i><b>1.2</b> Workflow</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#getting-started"><i class="fa fa-check"></i><b>2.1</b> Getting Started</a></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#workflow"><i class="fa fa-check"></i><b>2.2</b> Workflow</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="Datavisualisation.html"><a href="Datavisualisation.html"><i class="fa fa-check"></i><b>2</b> Data visualisation</a><ul>
-<li class="chapter" data-level="2.1" data-path="Datavisualisation.html"><a href="Datavisualisation.html#exercises"><i class="fa fa-check"></i><b>2.1</b> 3.2.4 Exercises</a></li>
+<li class="chapter" data-level="3" data-path="intro.html"><a href="intro.html#intro"><i class="fa fa-check"></i><b>3</b> Introduction</a></li>
+<li class="chapter" data-level="4" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>4</b> Literature</a></li>
+<li class="chapter" data-level="5" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>5</b> Methods</a></li>
+<li class="chapter" data-level="6" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>6</b> Applications</a><ul>
+<li class="chapter" data-level="6.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>6.1</b> Example one</a></li>
+<li class="chapter" data-level="6.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>6.2</b> Example two</a></li>
 </ul></li>
+<li class="chapter" data-level="7" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>7</b> Final Words</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
-<li><a href="#" target="blank">Published by shirogichohi</a></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
 </ul>
 
@@ -134,42 +141,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="header">
 <h1 class="title">Learning R and Solving Exercise Solutions</h1>
 <p class="author"><em>Mary Gichohi</em></p>
-<p class="date"><em>2019-02-10</em></p>
+<p class="date"><em>2019-02-25</em></p>
 </div>
-<div id="intro" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
-<p>I’m guiding a group R4DS community in learning together the great book; R for Data Science Book by Garrett Grolemund and Hadley Wickam’s . We are covering sections of the book weekly, dedicating atleast two hours weekly as well as having hangout call weekly reviews .</p>
-<p>Main Goal The goal of R4DS community is to help you learn the most important tools in R that will allow you to do Data Science</p>
-<div id="getting-started" class="section level2">
-<h2><span class="header-section-number">1.1</span> Getting Started</h2>
-<p>You will need four things to be able to run the code in the R4DS Book: R, RStudio, An R Package called TIDYVERSE and A few other packages</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">    <span class="co">#   Step one:  Install R and Rstudio</span>
-<span class="co">#Installing R: https://cloud.r-project.org</span>
-<span class="co">#Installing Rstudio: http://www.rstudio.com/download</span>
-
-    <span class="co">#Step two: Download and install packages to be used. </span>
-<span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)   <span class="co">#Main package to be used</span>
-<span class="kw">install.packages</span>(<span class="kw">c</span>(<span class="st">&quot;nycflights13&quot;</span>, <span class="st">&quot;gapminder&quot;</span>, <span class="st">&quot;Lahman&quot;</span>))  <span class="co">#Others to be used </span></code></pre></div>
-<p>What you will learn. Importing Data into R Tidying up your Data Transformation Visualization Models/programming Communicate</p>
-<p>What you will not learn The book does not cover every important topic, but everything it covers will get you up and running in no second.</p>
-</div>
-<div id="workflow" class="section level2">
-<h2><span class="header-section-number">1.2</span> Workflow</h2>
-<blockquote>
-<p>The R4DS model of the tools is organised roughly according to the order in which you use them in an analysis.</p>
-</blockquote>
-<blockquote>
-<p>In refernec to the book, we’ll start with visualisation and transformation of data that’s already been imported and tidied.</p>
-</blockquote>
-<blockquote>
-<p>Within each chapter of the book, we try and stick to a similar pattern: start with some motivating examples so you can see the bigger picture, and then dive into the details.</p>
-</blockquote>
-<blockquote>
-<p>Each section of the book is paired with exercises to help you practice what you’ve learned. We shall be solving these exercises together.</p>
-</blockquote>
-<pre><code>                  Happy Learning!!!!!!!!!!!!!!!!</code></pre>
-
-</div>
+<div id="welcome" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Welcome</h1>
+<p>Welcome , karibu sana</p>
 </div>
             </section>
 
@@ -177,7 +153,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
         </div>
       </div>
 
-<a href="Datavisualisation.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -207,14 +183,14 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"text": "Edit"
 },
 "history": {
 "link": null,
 "text": null
 },
-"download": ["LearningR.pdf", "LearningR.epub"],
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
 "toc": {
 "collapse": "subsection"
 }

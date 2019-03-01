@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Chapter 2 Data visualisation | Learning R and Solving Exercise Solutions</title>
+  <title>Chapter 3 Data visualisation | Learning R and Solving Exercise Solutions</title>
   <meta name="description" content="This is a walkthrough in learning R for Data Science Book (by Garrett Grolemund and Hadley Wickham) as well as solving exercises in each section.">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Chapter 2 Data visualisation | Learning R and Solving Exercise Solutions" />
+  <meta property="og:title" content="Chapter 3 Data visualisation | Learning R and Solving Exercise Solutions" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Data visualisation | Learning R and Solving Exercise Solutions" />
+  <meta name="twitter:title" content="Chapter 3 Data visualisation | Learning R and Solving Exercise Solutions" />
   
   <meta name="twitter:description" content="This is a walkthrough in learning R for Data Science Book (by Garrett Grolemund and Hadley Wickham) as well as solving exercises in each section." />
   
@@ -25,14 +25,14 @@
 <meta name="author" content="Mary Gichohi">
 
 
-<meta name="date" content="2019-02-10">
+<meta name="date" content="2019-03-01">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="index.html">
+<link rel="prev" href="intro.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -101,19 +101,23 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">R for Data Science(R4DS)</a></li>
+<li><a href="./">A Minimal Book Example</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a><ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#getting-started"><i class="fa fa-check"></i><b>1.1</b> Getting Started</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#workflow"><i class="fa fa-check"></i><b>1.2</b> Workflow</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="Datavisualisation.html"><a href="Datavisualisation.html"><i class="fa fa-check"></i><b>2</b> Data visualisation</a><ul>
-<li class="chapter" data-level="2.1" data-path="Datavisualisation.html"><a href="Datavisualisation.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
-<li class="chapter" data-level="2.2" data-path="Datavisualisation.html"><a href="Datavisualisation.html#exercises"><i class="fa fa-check"></i><b>2.2</b> 3.2.4 Exercises</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
+<li class="chapter" data-level="3" data-path="Datavisualisation.html"><a href="Datavisualisation.html"><i class="fa fa-check"></i><b>3</b> Data visualisation</a><ul>
+<li class="chapter" data-level="3.1" data-path="Datavisualisation.html"><a href="Datavisualisation.html#introduction"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="Datavisualisation.html"><a href="Datavisualisation.html#exercises-ggplot"><i class="fa fa-check"></i><b>3.2</b> 3.2.4 Exercises-ggplot</a></li>
+<li class="chapter" data-level="3.3" data-path="Datavisualisation.html"><a href="Datavisualisation.html#exercises-aesthetic-mappings"><i class="fa fa-check"></i><b>3.3</b> 3.3.1-Exercises-Aesthetic mappings</a></li>
+<li class="chapter" data-level="3.4" data-path="Datavisualisation.html"><a href="Datavisualisation.html#facelets"><i class="fa fa-check"></i><b>3.4</b> 3.5.1 Exercises -Facelets</a></li>
+<li class="chapter" data-level="3.5" data-path="Datavisualisation.html"><a href="Datavisualisation.html#exercisesgeometric-objects"><i class="fa fa-check"></i><b>3.5</b> 3.6.1 Exercises(Geometric objects)</a></li>
 </ul></li>
 <li class="divider"></li>
-<li><a href="#" target="blank">Published by shirogichohi</a></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
 </ul>
 
@@ -133,23 +137,20 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="Datavisualisation" class="section level1">
-<h1><span class="header-section-number">Chapter 2</span> Data visualisation</h1>
+<h1><span class="header-section-number">Chapter 3</span> Data visualisation</h1>
 <div id="introduction" class="section level2">
-<h2><span class="header-section-number">2.1</span> Introduction</h2>
-<p>In Chapter <a href="index.html#intro">1</a>. we installed a package called tidyverse. incase you haven’t.</p>
+<h2><span class="header-section-number">3.1</span> Introduction</h2>
+<p>In Chapter <a href="intro.html#intro">2</a>. we installed a package called tidyverse. incase you haven’t.</p>
 <p>Now for data visualization, we shall be using ggplot which is a member of tidyverse we just installed.</p>
 <p>Building graphs with ggplot -&gt;Point to note (Template for using ggplot) -&gt;DATA is the dataset you will be using -&gt;MAPPINGS - mapping collection of the graph ggplot(data = <DATA>) + <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))</p>
 </div>
-<div id="exercises" class="section level2">
-<h2><span class="header-section-number">2.2</span> 3.2.4 Exercises</h2>
+<div id="exercises-ggplot" class="section level2">
+<h2><span class="header-section-number">3.2</span> 3.2.4 Exercises-ggplot</h2>
 <p>Question 1 Run ggplot(data = mpg). What do you see?</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg)</code></pre></div>
-<p><img src="LearningR_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <blockquote>
 <p>ggplot(data = mpg) displays an empty graph</p>
 </blockquote>
 <p>Question 2 How many rows are in mpg? How many columns?</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">?mpg <span class="co"># displays a detailed description of mpg dataframe inclusive of the number of rows and columns 234 rows , 11 columns/variable</span></code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Another alternative</span>
 <span class="kw">glimpse</span>(mpg)</code></pre></div>
 <pre><code>## Observations: 234
@@ -189,10 +190,182 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#The first argument in ggplot describe dataset we are using</span>
 <span class="co">#Use + sign to add more arguments</span>
 <span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> hwy , <span class="dt">y =</span> cyl))</code></pre></div>
-<p><img src="LearningR_files/figure-html/unnamed-chunk-8-1.png" width="672" /> Question 5 What happens if you make a scatterplot of class vs drv? Why is the plot not useful?</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-8-1.png" width="672" /> Question 5 What happens if you make a scatterplot of class vs drv? Why is the plot not useful?</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x =</span> class , <span class="dt">y =</span> drv))</code></pre></div>
-<p><img src="LearningR_files/figure-html/unnamed-chunk-9-1.png" width="672" /> Answer : The two Variables are both categorical variables , why not useful , having two categorical variables usually take on one of a limited, and usually fixed number of possible values in (x,y) to be displayed , thus omiting others.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-9-1.png" width="672" /> Answer : The two Variables are both categorical variables , why not useful , having two categorical variables usually take on one of a limited, and usually fixed number of possible values in (x,y) to be displayed , thus omiting others.</p>
+</div>
+<div id="exercises-aesthetic-mappings" class="section level2">
+<h2><span class="header-section-number">3.3</span> 3.3.1-Exercises-Aesthetic mappings</h2>
+<p>To use ggplot for this exercise , load tidyverse (which has ggplot ) as follows</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)</code></pre></div>
+<p><em>Question 1</em> What’s gone wrong with this code? Why are the points not blue?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">color =</span> <span class="st">&quot;blue&quot;</span>))</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-11-1.png" width="672" /> <em>Answer :</em> Since blue is included in the mapping arguement , blue is treated as a variables to be mapped to an aesthetic, just like hwy or displ. The correct way would be to set the color as an argument of the geom_point method.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy) , <span class="dt">color =</span> <span class="st">&quot;blue&quot;</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-12-1.png" width="672" /> Question 2 Which variables in mpg are categorical? Which variables are continuous? (Hint: type ?mpg to read the documentation for the dataset). How can you see this information when you run mpg?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(mpg)</code></pre></div>
+<pre><code>## Classes &#39;tbl_df&#39;, &#39;tbl&#39; and &#39;data.frame&#39;:    234 obs. of  11 variables:
+##  $ manufacturer: chr  &quot;audi&quot; &quot;audi&quot; &quot;audi&quot; &quot;audi&quot; ...
+##  $ model       : chr  &quot;a4&quot; &quot;a4&quot; &quot;a4&quot; &quot;a4&quot; ...
+##  $ displ       : num  1.8 1.8 2 2 2.8 2.8 3.1 1.8 1.8 2 ...
+##  $ year        : int  1999 1999 2008 2008 1999 1999 2008 1999 1999 2008 ...
+##  $ cyl         : int  4 4 4 4 6 6 6 4 4 4 ...
+##  $ trans       : chr  &quot;auto(l5)&quot; &quot;manual(m5)&quot; &quot;manual(m6)&quot; &quot;auto(av)&quot; ...
+##  $ drv         : chr  &quot;f&quot; &quot;f&quot; &quot;f&quot; &quot;f&quot; ...
+##  $ cty         : int  18 21 20 21 16 18 18 18 16 20 ...
+##  $ hwy         : int  29 29 31 30 26 26 27 26 25 28 ...
+##  $ fl          : chr  &quot;p&quot; &quot;p&quot; &quot;p&quot; &quot;p&quot; ...
+##  $ class       : chr  &quot;compact&quot; &quot;compact&quot; &quot;compact&quot; &quot;compact&quot; ...</code></pre>
+<p>Answer : Categorical variables are those of type chr while continous are those of type int/num</p>
+<p>Question 3 Map a continuous variable to color, size, and shape. How do these aesthetics behave differently for categorical vs. continuous variables?</p>
+<p>Answer Continous variable cannot be mapped to shape (shapes aren’t ordered)</p>
+<p>POINT TO NOTE Shape can deal with a maximum of 6 discrete values because more than 6 becomes difficult to discriminate; you have 10. Consider specifying shapes manually if you must have them otherwise it will remove some of the rows.</p>
+<p>Question 4 What happens if you map the same variable to multiple aesthetics?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span>
+<span class="st">        </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">size =</span> cty, <span class="dt">color =</span> cty, <span class="dt">alpha =</span> cty))</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-15-1.png" width="672" /> Answer : Not ideal, redudancy of the variable making it hard to analyze</p>
+<p>Question 5 What does the stroke aesthetic do? What shapes does it work with? (Hint: use ?geom_point)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span>
+<span class="st">        </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy , <span class="dt">color =</span> class ), <span class="dt">shape =</span> <span class="dv">1</span>, <span class="dt">stroke =</span> <span class="dv">4</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-16-1.png" width="672" /> Answer : Stroke represents the border width size of the shape , the larger the number you represent for stroke, the larger it increases the border width</p>
+<p>Question 6</p>
+<p>What happens if you map an aesthetic to something other than a variable name, like aes(colour = displ &lt; 5)? Note, you’ll also need to specify x and y.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span>
+<span class="st">        </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy , <span class="dt">color =</span> class <span class="op">&lt;</span><span class="st"> </span><span class="dv">5</span> ), <span class="dt">shape =</span> <span class="dv">1</span>, <span class="dt">stroke =</span> <span class="dv">4</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-17-1.png" width="672" /> Answer : This will display a graph mapped aganist boolean variables (True or False) That is, a different color or shape if observations are less than 5 verses a different color or shape if the observations are more than 5.</p>
+</div>
+<div id="facelets" class="section level2">
+<h2><span class="header-section-number">3.4</span> 3.5.1 Exercises -Facelets</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)</code></pre></div>
+<p>Question 1 What happens if you facet on a continuous variable? Let’s try by example where displ is a continous variable</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> cyl, <span class="dt">y =</span> hwy)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span><span class="st"> </span>displ)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-19-1.png" width="672" /> Answer : Total insane.makes no sense.!! A facelet for each value, suppose we have a million values.(I bet it would crash R)</p>
+<p>Question 2 What do the empty cells in plot with facet_grid(drv ~ cyl) mean? How do they relate to this plot?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> drv, <span class="dt">y =</span> cyl))</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> drv, <span class="dt">y =</span> cyl)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">facet_grid</span>(drv <span class="op">~</span><span class="st"> </span>cyl)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-21-1.png" width="672" /> Answer : rear wheel drive Empty cells imply no observation for the variable combination. From our graph above there are no vehicles with 5 cylinders also no vehicles with 5 cylinders that are also 4 wheel drive vehicles. The two grapghs are similar only that facet appears to be showing a single data point.</p>
+<p>Question 3 What plots does the following code make? What does . do?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">facet_grid</span>(drv <span class="op">~</span><span class="st"> </span>.)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">facet_grid</span>(. <span class="op">~</span><span class="st"> </span>cyl)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-22-2.png" width="672" /> For the first graph , (~drv .) , .imply plot without column attribute thus showing a graph with row plots whileas (. ~cyl) implying plot without row attribute thus showing a graph with column plots. .is used in showing only one dimension (omiting row or a column)</p>
+<p>Question 4. Take the first faceted plot in this section:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span><span class="st"> </span>class, <span class="dt">nrow =</span> <span class="dv">2</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-23-1.png" width="672" /> What are the advantages to using faceting instead of the colour aesthetic? -&gt; Faceting divides the data into separate smaller plots making it easier visualizing within each facelet.For colour aesthetic is not ideal for large dataset as colors may start overlapping, making it hard visualizing.</p>
+<p>What are the disadvantages? -&gt; Since graph isnt continous, it would be difficult to make an overall analysis especilally if dealing with large dataset</p>
+<p>How might the balance change if you had a larger dataset? -&gt;For large dataset, one graph that is not sub-grouped would be the best over having facets especially in doing overall data analysis .</p>
+<p>Question 5 Read ?facet_wrap. What does nrow do? What does ncol do? What other options control the layout of the individual panels? Why doesn’t facet_grid() have nrow and ncol arguments?</p>
+<p>Question 5 When using facet_grid() you should usually put the variable with more unique levels in the columns. Why? -&gt;space.View space is more vertically than it is horizontally , since data will compress to fit in the screen, making it harder to view.</p>
+</div>
+<div id="exercisesgeometric-objects" class="section level2">
+<h2><span class="header-section-number">3.5</span> 3.6.1 Exercises(Geometric objects)</h2>
+<p>1.What geom would you use to draw a line chart? A boxplot? A histogram? An area chart? &gt;bar charts use bar geoms, line charts use line geoms, boxplots use boxplot geoms, and so on. Scatterplots they use the point geom. &gt;Line chart - geom_line() &gt;Boxplot - geom_boxplot() &gt;Histogram - geom_histogram() &gt;Area chart - geom_area()</p>
+<p>2.Run this code in your head and predict what the output will look like. Then, run the code in R and check your predictions.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)
+<span class="kw">ggplot</span>(<span class="dt">data =</span> mpg, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">color =</span> drv)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">se =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-25-1.png" width="672" /> &gt;point : Smoothing a plot refers to the act of making it more round(removing the peaks and troughs to show trend). &gt;<code>using method = loess and formula y~x</code> implies you are using a regression method called “<em>LO</em>cal regr<em>ESS</em>ion” and with a formula regressing y (hwy) on x (displ). &gt;<code>se</code> refers to standard errors, this is the difference between the actual value of y and the predicted value of y(y-hat). &gt;For <code>se = T</code>, the range (shaded region) will be plotted alongside the smoothed plot and vice versa if <em>False</em></p>
+<p>Question 3 What does show.legend = FALSE do? What happens if you remove it? Why do you think I used it earlier in the chapter?</p>
+<p>Question 4 What does the confidence interval (The gray area) around the smoothing line. if set true, if set false it does not show.</p>
+<p>Question 5 Will these two graphs look different? Why/why not?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_smooth</span>()</code></pre></div>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>() <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data =</span> mpg, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">data =</span> mpg, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy))</code></pre></div>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-26-2.png" width="672" /> &gt;No they are using the same data and mapping settings. &gt;First graph ,the layers inherit the configuration from ggplot. and the second graph similar layers are assigned directly</p>
+<p>Question 6 Recreate the R code necessary to generate the following graphs.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)
 
+<span class="kw">ggplot</span>(mpg, <span class="kw">aes</span>(displ , hwy)) <span class="op">+</span>
+<span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span>
+<span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">data =</span> mpg, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span>
+<span class="st">    </span><span class="kw">facet_wrap</span>(<span class="op">~</span>class) <span class="co"># coherces to intervals</span></code></pre></div>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+## parametric, : span too small. fewer data values than degrees of freedom.</code></pre>
+<pre><code>## Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+## parametric, : pseudoinverse used at 5.6935</code></pre>
+<pre><code>## Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+## parametric, : neighborhood radius 0.5065</code></pre>
+<pre><code>## Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+## parametric, : reciprocal condition number 0</code></pre>
+<pre><code>## Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+## parametric, : There are other near singularities as well. 0.65044</code></pre>
+<pre><code>## Warning in predLoess(object$y, object$x, newx = if
+## (is.null(newdata)) object$x else if (is.data.frame(newdata))
+## as.matrix(model.frame(delete.response(terms(object)), : span too small.
+## fewer data values than degrees of freedom.</code></pre>
+<pre><code>## Warning in predLoess(object$y, object$x, newx = if
+## (is.null(newdata)) object$x else if (is.data.frame(newdata))
+## as.matrix(model.frame(delete.response(terms(object)), : pseudoinverse used
+## at 5.6935</code></pre>
+<pre><code>## Warning in predLoess(object$y, object$x, newx = if
+## (is.null(newdata)) object$x else if (is.data.frame(newdata))
+## as.matrix(model.frame(delete.response(terms(object)), : neighborhood radius
+## 0.5065</code></pre>
+<pre><code>## Warning in predLoess(object$y, object$x, newx = if
+## (is.null(newdata)) object$x else if (is.data.frame(newdata))
+## as.matrix(model.frame(delete.response(terms(object)), : reciprocal
+## condition number 0</code></pre>
+<pre><code>## Warning in predLoess(object$y, object$x, newx = if
+## (is.null(newdata)) object$x else if (is.data.frame(newdata))
+## as.matrix(model.frame(delete.response(terms(object)), : There are other
+## near singularities as well. 0.65044</code></pre>
+<pre><code>## Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+## parametric, : pseudoinverse used at 4.008</code></pre>
+<pre><code>## Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+## parametric, : neighborhood radius 0.708</code></pre>
+<pre><code>## Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+## parametric, : reciprocal condition number 0</code></pre>
+<pre><code>## Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+## parametric, : There are other near singularities as well. 0.25</code></pre>
+<pre><code>## Warning in predLoess(object$y, object$x, newx = if
+## (is.null(newdata)) object$x else if (is.data.frame(newdata))
+## as.matrix(model.frame(delete.response(terms(object)), : pseudoinverse used
+## at 4.008</code></pre>
+<pre><code>## Warning in predLoess(object$y, object$x, newx = if
+## (is.null(newdata)) object$x else if (is.data.frame(newdata))
+## as.matrix(model.frame(delete.response(terms(object)), : neighborhood radius
+## 0.708</code></pre>
+<pre><code>## Warning in predLoess(object$y, object$x, newx = if
+## (is.null(newdata)) object$x else if (is.data.frame(newdata))
+## as.matrix(model.frame(delete.response(terms(object)), : reciprocal
+## condition number 0</code></pre>
+<pre><code>## Warning in predLoess(object$y, object$x, newx = if
+## (is.null(newdata)) object$x else if (is.data.frame(newdata))
+## as.matrix(model.frame(delete.response(terms(object)), : There are other
+## near singularities as well. 0.25</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+
+<div id="refs" class="references">
+<div>
+<p>Xie, Yihui. 2015. <em>Dynamic Documents with R and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.name/knitr/" class="uri">http://yihui.name/knitr/</a>.</p>
+</div>
+<div>
+<p>———. 2018. <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>. <a href="https://CRAN.R-project.org/package=bookdown" class="uri">https://CRAN.R-project.org/package=bookdown</a>.</p>
+</div>
+</div>
 </div>
 </div>
             </section>
@@ -200,7 +373,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="intro.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
@@ -231,14 +404,14 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-datavisualization.Rmd",
+"text": "Edit"
 },
 "history": {
 "link": null,
 "text": null
 },
-"download": ["LearningR.pdf", "LearningR.epub"],
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
 "toc": {
 "collapse": "subsection"
 }
